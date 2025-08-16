@@ -16,5 +16,5 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  base: "LucasFrizero.Designer"
+  base: "/lucasfrizero.designer"
 }));

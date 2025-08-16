@@ -13,7 +13,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="LucasFrizero.Designer">
+      <BrowserRouter basename="lucasfrizero.designer">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="*" element={<NotFound />} />
