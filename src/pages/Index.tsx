@@ -3,10 +3,11 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { AboutSection } from "@/components/AboutSection";
 import { ContactSection } from "@/components/ContactSection";
 import { ProjectsBackgroundPath } from "@/components/AnimatedPath";
-import project1 from "@/assets/project-1.jpg";
-import project2 from "@/assets/project-2.jpg";
+import project1 from "@/assets/project-1.mp4";
+import project2 from "@/assets/project-2.mp4";
 import project3 from "@/assets/project-3.jpg";
 import project4 from "@/assets/project-4.jpg";
+import { url } from "inspector";
 
 const Index = () => {
   const projects = [
@@ -14,25 +15,33 @@ const Index = () => {
       title: "Identidade Visual Moderna",
       description: "Desenvolvimento completo de marca para startup de tecnologia, incluindo logo, paleta de cores, tipografia e aplicações em diversos materiais.",
       image: project1,
-      category: "Branding"
+      category: "Motion",
+      url: "https://www.behance.net/lucasfrizero1",
+      motion: true
     },
     {
       title: "Design de Interface Web",
       description: "Criação de interface moderna e responsiva para plataforma de e-commerce, focada na experiência do usuário e conversão.",
       image: project2,
-      category: "UI/UX Design"
+      category: "Motion",
+      url: "https://www.behance.net/lucasfrizero1" ,
+      motion: true
     },
     {
       title: "Design Editorial",
       description: "Projeto editorial para revista de arquitetura, com foco em tipografia elegante e layout que valoriza o conteúdo visual.",
       image: project3,
-      category: "Editorial"
+      category: "Flyer",
+      url: "https://www.behance.net/lucasfrizero1" ,
+      motion: false
     },
     {
       title: "Packaging Premium",
       description: "Design de embalagem para linha de cosméticos premium, combinando elegância, sustentabilidade e diferenciação no ponto de venda.",
       image: project4,
-      category: "Packaging"
+      category: "Flyer",
+      url: "https://www.behance.net/lucasfrizero1" ,
+      motion: false
     }
   ];
 
@@ -64,6 +73,8 @@ const Index = () => {
                 description={project.description}
                 image={project.image}
                 category={project.category}
+                url={project.url}
+                motion={project.motion}
                 reverse={index % 2 !== 0}
               />
             ))}

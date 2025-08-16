@@ -28,15 +28,16 @@ export const ProjectsBackgroundPath = () => {
     if (isDesktop) {
       // Desktop: path that flows between left and right positioned projects
       return `
-        M 20 10
-        Q 30 15 40 25
+        M 20 -1
+        Q 30 50 60 20
         Q 50 35 60 50
-        Q 80 65 60 80
+        Q 70 65 55 80
         Q 40 95 20 110
-        Q 10 125 30 140
-        Q 50 155 70 170
-        Q 80 185 60 200
+        Q 5 125 30 140
+        Q 65 155 70 170
+        Q 75 185 60 200
         Q 40 215 20 230
+        Q 0 250 10 270
       `;
     } else {
       // Mobile: simpler vertical path along the left side
@@ -105,24 +106,9 @@ export const ProjectsBackgroundPath = () => {
           }}
         />
         
-        {/* Subtle floating elements */}
-        <circle r="1.5" fill="hsl(250 100% 60%)" opacity="0.4">
-          <animateMotion
-            dur="12s"
-            repeatCount="indefinite"
-            path={getProjectsPath()}
-            begin={isVisible ? "0s" : "indefinite"}
-          />
-        </circle>
         
-        <circle r="1" fill="hsl(320 100% 65%)" opacity="0.6">
-          <animateMotion
-            dur="15s"
-            repeatCount="indefinite"
-            path={getProjectsPath()}
-            begin={isVisible ? "3s" : "indefinite"}
-          />
-        </circle>
+        
+        
       </svg>
     </div>
   );
